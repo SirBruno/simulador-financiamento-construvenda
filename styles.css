@@ -1,0 +1,170 @@
+#loanCalc {
+  text-align: center;
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#valorDoLote,
+#valorDaEntrada {
+  margin: 0 auto;
+  width: 70%;
+  padding: 18px;
+  font-size: 18px;
+  border: thin solid #eee;
+  color: #000;
+  transition: .3s;
+  text-align: center;
+}
+
+#valorDoFinanciamento {
+  margin: 0 auto;
+  width: 70%;
+  padding: 18px;
+  font-size: 20px;
+  border: thin solid #eee;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+}
+
+#valorDoLote::placeholder,
+#valorDaEntrada::placeholder {
+  color: #aaa;
+}
+
+#valorDoLote:focus,
+#valorDaEntrada:focus {
+  outline: none;
+  border: thin solid #000;
+  transition: .3s;
+}
+
+.mainContainer {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.innerContainer {
+  box-shadow: 0 0 10px rgba(0,0,0,.15);
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 20px;
+}
+
+.gridRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: thin solid #eee;
+}
+
+.gridRow:last-child {
+  border: none;
+}
+
+.highlightedText {
+  padding: 40px 0 20px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.lastSection .gridRow:nth-child(7),
+.lastSection .gridRow:nth-child(8) {
+  border: none;
+}
+
+.lastSection .gridRow:nth-child(1),
+.lastSection .gridRow:nth-child(2) {
+  padding-top: 0;
+}
+
+.numPaymentSection b {
+  font-size: 16px;
+  color: #555;
+  font-weight: 400;
+}
+
+.numPaymentSection span {
+  font-size: 18px;
+}
+
+#errorMessage {
+  padding: 20px 100px;
+  font-size: 15px;
+  text-align: center;
+}
+
+#cmd {
+  color: #fff;
+  background: #DA2128;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: none;
+  margin: 20px 0;
+}
+
+#cmd:hover {
+  cursor: pointer;
+}
+
+#cmd:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 767px) {
+  #loanCalc {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .innerContainer {
+    padding: 20px !important;
+  }
+  
+  .numPaymentSection .gridRow {
+    display: inline-flex;
+    justify-content: space-between;
+  }
+
+  .gridRow {
+    grid-template-columns: 1fr;
+  }
+
+  #valorDoLote,
+  #valorDaEntrada,
+  #valorDoFinanciamento {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 5px;
+    font-size: 20px;
+  }
+
+  #errorMessage {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .highlightedText {
+    padding: 20px;
+    margin: 0;
+  }
+
+  .lastSection .gridRow  {
+    padding: 5px;
+  }
+
+  .lastSection .gridRow:nth-child(7) {
+    border-bottom: thin solid #eee;
+  }
+
+  .lastSection .gridRow:nth-child(1),
+  .lastSection .gridRow:nth-child(2) {
+    padding-top: 5px;
+  }
+
+  .numPaymentSection span {
+    font-size: 18px;
+    padding-top: 4px;
+  }
+}
